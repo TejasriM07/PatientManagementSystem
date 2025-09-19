@@ -1,4 +1,5 @@
 🏥 Patient Management System
+
 This is a full-stack web application designed to streamline hospital operations by managing patient records, doctors, and appointments. The system provides a centralized dashboard for hospital staff to track key metrics and efficiently handle daily tasks.
 
 ✨ Features
