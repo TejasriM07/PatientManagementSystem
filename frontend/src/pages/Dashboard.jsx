@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { 
   Box, 
-  Typography, 
-  Button,
-  Paper,
-  Grid as MuiGrid,
-  IconButton,
-  Card,
-  CardContent,
-  Avatar,
-  Rating,
-  Divider,
-  LinearProgress
+  Grid, 
+  Card, 
+  CardContent, 
+  Typography 
 } from '@mui/material';
 import { 
   LocalHospital,
   Group,
   EventAvailable,
-  TrendingUp,
   ArrowForward,
   Star,
   PersonAdd,

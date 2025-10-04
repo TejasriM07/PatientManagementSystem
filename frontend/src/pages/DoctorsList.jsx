@@ -2,55 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { 
   Box, 
   Typography, 
+  Grid, 
   Card, 
-  CardContent, 
-  Button, 
-  TextField,
-  InputAdornment,
-  IconButton,
-  Divider,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Paper,
-  Avatar
+  CardContent 
 } from '@mui/material';
-import {
-  PersonAdd,
-  MedicalServices,
-  School,
-  WorkHistory,
-  Person,
-  Phone,
-  LocationOn,
-  Wc,
-  CalendarToday
-} from '@mui/icons-material';
+import { PersonAdd, MedicalServices, School, WorkHistory } from '@mui/icons-material';
 import api from '../utils/api';
 
 function DoctorsList() {
   const [doctors, setDoctors] = useState([]);
-  const [patientForm, setPatientForm] = useState({ name: '', gender: '', age: '', contactNumber: '', place: '' });
   const [selectedDoctor, setSelectedDoctor] = useState('');
-  const [error, setError] = useState('');
 
   useEffect(() => {
     api.get('/doctors').then(res => setDoctors(res.data));
   }, []);
-
-  const handleChange = e => setPatientForm({ ...patientForm, [e.target.name]: e.target.value });
-
-  const handleSubmit = async e => {
-    e.preventDefault();
-    try {
-      await api.post('/patients/add', { ...patientForm, consultationHistory: [{ doctor: selectedDoctor }] });
-      setError('');
-      alert('Patient added to doctor!');
-    } catch (err) {
-      setError(err.response?.data?.message || 'Adding patient failed');
-    }
-  };
 
   return (
     <Box sx={{ p: 4, }}>
