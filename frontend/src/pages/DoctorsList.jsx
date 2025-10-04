@@ -4,7 +4,10 @@ import {
   Typography, 
   Grid, 
   Card, 
-  CardContent 
+  CardContent,
+  Avatar,
+  Divider,
+  Button
 } from '@mui/material';
 import { PersonAdd, MedicalServices, School, WorkHistory } from '@mui/icons-material';
 import api from '../utils/api';

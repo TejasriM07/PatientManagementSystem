@@ -4,7 +4,12 @@ import {
   Grid, 
   Card, 
   CardContent, 
-  Typography 
+  Typography,
+  Paper,
+  Button,
+  Avatar,
+  Divider,
+  Rating
 } from '@mui/material';
 import { 
   LocalHospital,
@@ -121,8 +126,8 @@ const Dashboard = () => {
       </Paper>
 
       {/* Statistics Cards */}
-      <MuiGrid container spacing={3} sx={{ mb: 4 }}>
-        <MuiGrid item xs={12} sm={6} md={3}>
+      <Grid container spacing={3} sx={{ mb: 4 }}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card 
             elevation={2}
             sx={{ 
@@ -154,9 +159,9 @@ const Dashboard = () => {
               </Typography>
             </CardContent>
           </Card>
-        </MuiGrid>
+        </Grid>
 
-        <MuiGrid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card 
             elevation={2}
             sx={{ 
@@ -188,9 +193,9 @@ const Dashboard = () => {
               </Typography>
             </CardContent>
           </Card>
-        </MuiGrid>
+        </Grid>
 
-        <MuiGrid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card 
             elevation={2}
             sx={{ 
@@ -222,9 +227,9 @@ const Dashboard = () => {
               </Typography>
             </CardContent>
           </Card>
-        </MuiGrid>
+        </Grid>
 
-        <MuiGrid item xs={12} sm={6} md={3}>
+        <Grid item xs={12} sm={6} md={3}>
           <Card 
             elevation={2}
             sx={{ 
@@ -256,8 +261,8 @@ const Dashboard = () => {
               </Typography>
             </CardContent>
           </Card>
-          </MuiGrid>
-      </MuiGrid>
+          </Grid>
+      </Grid>
       
       {/* Top Doctors */}
       <Box>
@@ -271,9 +276,9 @@ const Dashboard = () => {
         >
           Our Top Doctors
         </Typography>
-        <MuiGrid container spacing={3} sx={{ mb: 6 }}>
+        <Grid container spacing={3} sx={{ mb: 6 }}>
         {topDoctors.map(doctor => (
-          <MuiGrid item xs={12} sm={6} md={3} key={doctor._id}>
+          <Grid item xs={12} sm={6} md={3} key={doctor._id}>
             <Card 
               elevation={2}
               sx={{ 
@@ -324,9 +329,9 @@ const Dashboard = () => {
                 </Button>
               </CardContent>
             </Card>
-          </MuiGrid>
+          </Grid>
         ))}
-      </MuiGrid>
+      </Grid>
       </Box>
 
       {/* Patient Reviews */}
@@ -341,9 +346,9 @@ const Dashboard = () => {
         >
           Recent Patient Reviews
         </Typography>
-        <MuiGrid container spacing={3}>
+        <Grid container spacing={3}>
           {recentReviews.map(review => (
-            <MuiGrid item xs={12} md={6} key={review.id}>
+            <Grid item xs={12} md={6} key={review.id}>
               <Card 
                 elevation={2}
                 sx={{ 
@@ -382,9 +387,9 @@ const Dashboard = () => {
                   </Typography>
                 </CardContent>
               </Card>
-            </MuiGrid>
+            </Grid>
           ))}
-        </MuiGrid>
+        </Grid>
       </Box>
     </Box>
   );

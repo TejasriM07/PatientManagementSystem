@@ -1,5 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, TextField, Button, Grid, Alert } from '@mui/material';
+import { 
+  Box, 
+  Typography, 
+  TextField, 
+  Button, 
+  Grid, 
+  Alert,
+  Paper,
+  InputAdornment,
+  Card,
+  CardContent,
+  Chip,
+  Divider,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  Radio
+} from '@mui/material';
 import {
   Person,
   Search,
