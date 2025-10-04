@@ -12,6 +12,11 @@ const statsRoutes = require('./routes/stats');
 
 const app = express();
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('API is running!');
+});
+
 // Test route to verify backend is working
 app.get('/api/test', (req, res) => res.json({ message: 'API is working' }));
 
