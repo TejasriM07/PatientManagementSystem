@@ -17,8 +17,6 @@ import {
   EventAvailable,
   ArrowForward,
   Star,
-  PersonAdd,
-  CheckCircle,
   Schedule
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';

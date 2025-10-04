@@ -31,8 +31,7 @@ import {
   LocalHospital,
   Event,
   MedicalInformation,
-  PersonAdd,
-  AccessTime
+  PersonAdd
 } from '@mui/icons-material';
 import api from '../utils/api';
 

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { 
   Box, 
   Typography, 
-  Grid, 
   Card, 
   CardContent,
   Avatar,
@@ -14,7 +13,6 @@ import api from '../utils/api';
 
 function DoctorsList() {
   const [doctors, setDoctors] = useState([]);
-  const [selectedDoctor, setSelectedDoctor] = useState('');
 
   useEffect(() => {
     api.get('/doctors').then(res => setDoctors(res.data));
@@ -99,7 +97,6 @@ function DoctorsList() {
                 variant="contained"
                 fullWidth 
                 startIcon={<PersonAdd />}
-                onClick={() => setSelectedDoctor(doc._id)}
                 sx={{ 
                   mt: 3,
                   background: 'linear-gradient(45deg, #2b6777 30%, #52ab98 90%)',
