@@ -1,1 +1,5 @@
+# Redirect all routes to index.html for SPA routing
 /*    /index.html   200
+
+# API redirects (if needed for CORS)
+/api/*  https://patientmanagementsystem-gy67.onrender.com/api/:splat  200
