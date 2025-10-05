@@ -1,8 +1,11 @@
 import axios from 'axios';
 
 // API configuration for Patient Management System
+const baseURL = process.env.REACT_APP_API_URL || 'https://patientmanagementsystem-gy67.onrender.com/api';
+console.log('API Base URL:', baseURL); // Debug log
+
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'https://patientmanagementsystem-gy67.onrender.com/api',
+  baseURL: baseURL,
   headers: {
     'Content-Type': 'application/json',
   },
