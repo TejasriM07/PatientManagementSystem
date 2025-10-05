@@ -1,7 +1,6 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-import { createTheme } from '@mui/material/styles';
 import AuthContext from './context/AuthContext';
 import Sidebar from './components/Sidebar/Sidebar';
 import Header from './components/Header/Header';
@@ -16,11 +15,10 @@ import DoctorsList from './pages/DoctorsList';
 import AddPatient from './pages/AddPatient';
 import AppointmentList from './pages/AppointmentList';
 import NotFound from './pages/NotFound';
-import getDesignTokens from './theme';
+import theme from './theme';
 
 function App() {
-  const { user, themeMode } = useContext(AuthContext);
-  const theme = useMemo(() => createTheme(getDesignTokens(themeMode)), [themeMode]);
+  const { user } = useContext(AuthContext);
 
   return (
     <ThemeProvider theme={theme}>
