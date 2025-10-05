@@ -8,8 +8,6 @@ if (process.env.REACT_APP_API_URL && !process.env.REACT_APP_API_URL.endsWith('/a
   baseURL = process.env.REACT_APP_API_URL + '/api';
 }
 
-console.log('API Base URL:', baseURL); // Debug log
-
 const api = axios.create({
   baseURL: baseURL,
   headers: {

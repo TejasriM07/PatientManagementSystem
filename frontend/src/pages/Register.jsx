@@ -30,7 +30,7 @@ import {
 function Register() {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
-  const [role, setRole] = useState('Patient');
+  const [role, setRole] = useState('patient');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
@@ -146,7 +146,7 @@ function Register() {
               >
                 <MenuItem value="admin">Admin</MenuItem>
                 <MenuItem value="staff">Staff</MenuItem>
-                <MenuItem value="Patient">Patient</MenuItem>
+                <MenuItem value="patient">Patient</MenuItem>
               </Select>
             </FormControl>
 

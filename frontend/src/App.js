@@ -5,7 +5,6 @@ import AuthContext from './context/AuthContext';
 import Sidebar from './components/Sidebar/Sidebar';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import DebugInfo from './components/DebugInfo';
 import { Box } from '@mui/material';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -24,7 +23,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <DebugInfo />
       <Router>
         {user && <Sidebar />}
         <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', ...(user && { marginLeft: '280px' }) }}>
