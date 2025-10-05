@@ -1,7 +1,13 @@
 import axios from 'axios';
 
 // API configuration for Patient Management System
-const baseURL = process.env.REACT_APP_API_URL || 'https://patientmanagementsystem-gy67.onrender.com/api';
+let baseURL = process.env.REACT_APP_API_URL || 'https://patientmanagementsystem-gy67.onrender.com/api';
+
+// If environment variable is set but doesn't end with /api, add it
+if (process.env.REACT_APP_API_URL && !process.env.REACT_APP_API_URL.endsWith('/api')) {
+  baseURL = process.env.REACT_APP_API_URL + '/api';
+}
+
 console.log('API Base URL:', baseURL); // Debug log
 
 const api = axios.create({
